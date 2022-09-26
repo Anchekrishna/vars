@@ -1,7 +1,4 @@
 def call(body) {
-
-    ParamBinder.bind(params, this, body)
-
     pipeline {
     agent any
 
@@ -17,4 +14,5 @@ def call(body) {
         always 
             {archiveArtifacts artifacts: 'test', followSymlinks: false}
         }
+}
 }
